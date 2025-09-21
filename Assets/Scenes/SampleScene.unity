@@ -652,6 +652,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 1
+--- !u!114 &857192944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327188166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4b17de04e53ae44b3ac2996795fe8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletPrefab: {fileID: 882823332683497739, guid: f798fcc5fd3ca7648a6feadbea373aa3, type: 3}
+  _spawnPoint: {fileID: 1292192495}
+  _spawnRate: 1.5
 --- !u!1 &881045335
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +950,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a18e1564f520c34aa6f253249178095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1292192495 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2214025499315309095, guid: 027d3d2e3059a8a4497ef9f01a9ac5cc, type: 3}
+  m_PrefabInstance: {fileID: 1920743766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393922953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1152,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1682043032}
     m_Modifications:
+    - target: {fileID: 2214025499315309095, guid: 027d3d2e3059a8a4497ef9f01a9ac5cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.829
+      objectReference: {fileID: 0}
     - target: {fileID: 3226583421603586234, guid: 027d3d2e3059a8a4497ef9f01a9ac5cc, type: 3}
       propertyPath: m_Name
       value: Turret_HeavyMachine01_Prefab
@@ -1187,6 +1211,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3226583421603586234, guid: 027d3d2e3059a8a4497ef9f01a9ac5cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 857192943}
+    - targetCorrespondingSourceObject: {fileID: 3226583421603586234, guid: 027d3d2e3059a8a4497ef9f01a9ac5cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 857192944}
   m_SourcePrefab: {fileID: 100100000, guid: 027d3d2e3059a8a4497ef9f01a9ac5cc, type: 3}
 --- !u!1 &2071460843
 GameObject:

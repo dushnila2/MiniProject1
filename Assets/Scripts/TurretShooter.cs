@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class TurretShooter : MonoBehaviour
 {
-    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private Bullet _bulletPrefab;
     [SerializeField] private Transform _spawnPoint;  
 
     [SerializeField] private float _spawnRate = 1.5f;
-    private float _timer;                               
+    private float _timer;
+    private ObjectPool<Bullet> _pool;
 
     void Start()
     {
         _timer = _spawnRate; 
+        _pool = new ObjectPool<Bullet>(_bulletPrefab);
     }
 
     void Update()

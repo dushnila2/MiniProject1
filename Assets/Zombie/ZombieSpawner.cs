@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieSpawner : MonoBehaviour
@@ -9,7 +7,10 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] private Zombie _zombiePrefab;
 
     [SerializeField] private Transform _carTransform;
-    private ObjectPool<Zombie> _zombiePool
+    public Transform CarTransfrom => _carTransform;
+
+    private ObjectPool<Zombie> _zombiePool;
+
     private float timer;
 
     void Start()
@@ -18,20 +19,21 @@ public class ZombieSpawner : MonoBehaviour
         _zombiePool = new ObjectPool<Zombie>(_zombiePrefab);
     }
 
-
     void Update()
     {
         timer -= Time.deltaTime;
+
         if (timer <= 0)
         {
             SpawnZombie();
             timer = _spawnRate;
         }
     }
+
     private void SpawnZombie()
     {
-        Vector3 spawnPoint = new Vector3(Random.Range(-9, 9), 0.09f, _carTransform.position.z + _spawnRange);
-        Instantiate(_zombiePrefab, spawnPoint, Quaternion.identity);
+        Vector3 spawnPoint = new Vector3(Random.Range(-9, 9), 1.7f, _carTransform.position.z + _spawnRange);
         Zombie newZombie = _zombiePool.GetObject();
+        newZombie.Init(_zombiePool, this, spawnPoint);
     }
 }

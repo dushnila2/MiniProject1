@@ -32,7 +32,11 @@ public class ObjectPool<T> where T : MonoBehaviour
             return obj;
         }
     }
-    obj.gameObject.SetActive(false);
-    _pool.Enqueue(obj);
+
+    public void ReturnObject(T obj)
+    {
+        obj.gameObject.SetActive(false);
+        _pool.Enqueue(obj);
+    }
    
 }
