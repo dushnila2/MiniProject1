@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Car
+  - Zombie
+  - Bullet
   layers:
   - Default
   - TransparentFX
